@@ -2,7 +2,7 @@ import { PackageSearch, Github, Twitter, Mail, MapPin, Linkedin, InstagramIcon }
 
 const contactInfo = [
   { icon: Mail, text: 'hello@kinetic.com' },
-  { icon: MapPin, text: 'San Francisco, CA' }
+  { icon: MapPin, text: '22 Cameron Rd, Ikoyi, NG' }
 ];
 
 export default function Footer() {
