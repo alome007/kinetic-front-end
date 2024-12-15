@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { scrollToElement } from "../utils/scroll";
 import NotifyModal from "./NotifyModal";
 import { motion } from "framer-motion";
+import { trackEvent } from "../utils/analytics";
 import { slideIn } from "../utils/animations";
 import ThemeToggle from "./ThemeToggle";
 
@@ -21,6 +22,7 @@ export default function Header() {
   }, []);
 
   const handleMenuClick = (section: string) => {
+    trackEvent('navigation_click', 'navigation', `Navigate to ${section}`);
     scrollToElement(section);
     setIsMenuOpen(false);
   };

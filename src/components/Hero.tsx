@@ -3,6 +3,7 @@ import { useState } from "react";
 import NotifyModal from "./NotifyModal";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger } from "../utils/animations";
+import { trackEvent } from "../utils/analytics";
 import axios from "axios";
 
 const benefits = [
@@ -27,10 +28,13 @@ export default function Hero() {
     try {
       setIsloading(true);
       const url = `${import.meta.env.VITE_API_BASE_URL}/waitlist`;
+      trackEvent('waitlist_signup', 'engagement', 'Waitlist Form');
       await axios.post(url, { email: _email });
       setIsloading(false);
       setShowModal(true);
     } catch (e) {
+      trackEvent('waitlist_signup', 'error', e.message);
+
       setIsloading(false);
       alert(
         "An error occurred while adding to the waitlist. Please try again."
