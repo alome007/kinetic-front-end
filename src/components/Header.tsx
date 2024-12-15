@@ -45,17 +45,24 @@ export default function Header() {
               Kinetic
             </span>
           </div>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden flex items-center space-x-2 dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black"
-          >
-            <ThemeToggle />
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          
+          <div className="md:hidden flex items-center justify-between space-x-2 dark:text-white/70 text-black/70">
+  <div className="flex items-center space-x-2 hover:dark:text-white hover:text-black">
+    <ThemeToggle />
+  </div>
+  <button
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    className="flex dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black"
+  >
+    {isMenuOpen ? (
+      <X className="h-6 w-6" />
+    ) : (
+      <Menu className="h-6 w-6" />
+    )}
+  </button>
+</div>
+
+         
 
           <nav className="hidden md:flex items-center space-x-8">
             <button

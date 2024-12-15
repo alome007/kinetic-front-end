@@ -3,7 +3,7 @@ import { Package, Timer, Users } from 'lucide-react';
 const stats = [
   {
     icon: Package,
-    value: '10M+',
+    value: '1K+',
     label: 'Deliveries Completed'
   },
   {
@@ -13,7 +13,7 @@ const stats = [
   },
   {
     icon: Users,
-    value: '50k+',
+    value: '100+',
     label: 'Active Users'
   }
 ];

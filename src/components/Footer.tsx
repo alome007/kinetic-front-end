@@ -1,7 +1,7 @@
 import { PackageSearch, Github, Twitter, Mail, MapPin, Linkedin, InstagramIcon } from 'lucide-react';
 
 const contactInfo = [
-  { icon: Mail, text: 'hello@kinetic.com' },
+  { icon: Mail, text: 'daniel@astrocoder.me' },
   { icon: MapPin, text: '22 Cameron Rd, Ikoyi, NG' }
 ];
 
